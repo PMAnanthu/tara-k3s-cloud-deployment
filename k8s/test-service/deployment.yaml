@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tara-test-service
+  namespace: tara
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tara-test-service
+  template:
+    metadata:
+      labels:
+        app: tara-test-service
+    spec:
+      containers:
+      - name: tara-test-service
+        image: pmananthu/tara-test-service:${PLATFORM}
+        ports:
+        - containerPort: 3000
