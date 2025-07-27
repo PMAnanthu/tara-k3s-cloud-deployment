@@ -17,4 +17,4 @@ spec:
       - name: tara-test-service
         image: pmananthu/tara-test-service:latest
         ports:
-        - containerPort: 80
+        - containerPort: 3000
